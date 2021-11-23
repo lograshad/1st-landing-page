@@ -67,7 +67,7 @@ main{
 }
 
 .dark-header-divider{
-    background-image: url("images/dark-background.svg");
+    background-image: url("dark-background.svg");
     height: 150px;
     background-size: cover;
     background-position: bottom left;
@@ -94,7 +94,7 @@ main{
 }
 
 .light-header-divider{
-    background-image: url("images/light-background.svg");
+    background-image: url("light-background.svg");
     height: 150px;
     background-size: cover;
     background-position: bottom left;
