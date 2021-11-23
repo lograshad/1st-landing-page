@@ -1,0 +1,204 @@
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('fonts/GothamRounded-Bold.woff2') format('woff2'),
+		url('fonts/GothamRounded-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('fonts/GothamRounded-Light.woff2') format('woff2'),
+		url('fonts/GothamRounded-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('fonts/GothamRounded-Book.woff2') format('woff2'),
+		url('fonts/GothamRounded-Book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    margin: 0 auto;
+    font-family: gotham Rounded, sans-serif;
+}
+
+main{
+    margin: 2rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: ". content content content content .";
+}
+
+.dark-header{
+    background-color: #005681;
+    padding-top: 10px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.header-title{
+    grid-area: content;
+    width: 100%;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-description{
+    text-align: center;
+}
+
+.further-description{
+    text-align: center;
+}
+
+.logo{
+    height: 36px;
+    margin-right: 1.5rem;
+}
+
+.dark-header-divider{
+    background-image: url("images/dark-background.svg");
+    height: 150px;
+    background-size: cover;
+    background-position: bottom left;
+    margin-top: -2px;
+    position: relative;
+    z-index: 1;
+}
+
+.email{
+    grid-area: content;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.light-header{
+    background-color: #00AAFF;
+    margin-top: -500px;
+    padding-top: 500px;
+}
+
+.email-form{
+    display: flex;
+    justify-content: center;
+}
+
+.light-header-divider{
+    background-image: url("images/light-background.svg");
+    height: 150px;
+    background-size: cover;
+    background-position: bottom left;
+    margin-top: -50px;
+}
+
+.email-form input{
+    margin-right: 2rem;
+    flex-grow: 1;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #005681;
+    padding: .5em 2em;
+}
+
+.email-form button{
+    border-radius: 10px;
+    border: 1px solid #005681;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    padding: 0 1em;
+}
+
+.video-stn{
+    grid-template-areas: "video video video benefits benefits benefits";
+    align-items: center;
+    margin-top: 50px;
+}
+
+.video-stn video{
+    grid-area: video;
+    width: 100%;
+}
+
+.benefits{
+    grid-area: benefits;
+    margin-left: 3rem;
+    justify-self: flex-start;
+}
+
+.benefit{
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.benefit img{
+    height: 3rem;
+    margin-right: 2rem;
+}
+
+.add-contents{
+    grid-column: span 2;
+    margin: 2rem;
+}
+
+.add-contents-title{
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 745px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+    
+    .video-stn{
+        grid-template-columns: 1fr;
+        grid-template-areas: "video" "benefits";
+    }
+
+    .benefits{
+        margin-top: 2rem;
+    }
+    .benefit{
+        font-size: 1.5rem;
+    }
+    .benefit img{
+        height: 1.5rem;
+        margin-right: .5em;
+    }
+    .email-form{
+        max-width: 300px;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px){
+    .email-form{
+        display: flex;
+        flex-direction: column;
+    }
+    .email-form input{
+        margin-bottom: .4rem;
+    }
+    .email-form button{
+        width: 70px;
+    }
+    .logo{
+        display: none;
+    }
+    .dark-header{
+        font-size: .8rem;
+    }
+}
